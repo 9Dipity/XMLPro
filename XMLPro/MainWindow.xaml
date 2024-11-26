@@ -29,12 +29,15 @@
         </StackPanel>
 
         <!-- Right Panel -->
-        <TreeView Grid.Column="1" Name="XmlTreeView" Margin="10" SelectedItemChanged="XmlTreeView_SelectedItemChanged">
+        <TreeView Grid.Column="1" Name="XmlTreeView" Margin="10" SelectedItemChanged="XmlTreeView_SelectedItemChanged"
+          ContextMenuOpening="XmlTreeView_ContextMenuOpening">
             <TreeView.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Add Child Node" Click="AddChildNode_Click" />
+                    <MenuItem Header="Delete Node" Click="DeleteNode_Click" />
                 </ContextMenu>
             </TreeView.ContextMenu>
         </TreeView>
+
     </Grid>
 </Window>
