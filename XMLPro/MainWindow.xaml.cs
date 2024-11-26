@@ -6,6 +6,8 @@ using System.Windows.Controls;
 using System.Xml;
 using System.Xml.Linq;
 
+//README
+// To publish as a single file: open terminal, and do: dotnet publish -r win-x64 /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true --output "c:\desktop"
 namespace XMLTreeEditor
 {
     public partial class MainWindow : Window
