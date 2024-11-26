@@ -1,0 +1,17 @@
+﻿<Window x:Class="XMLTreeEditor.AddNodeDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add New Node" Height="200" Width="300" WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="10">
+        <TextBlock Text="Node Name:" Margin="0,0,0,5" />
+        <TextBox Name="NodeNameTextBox" Margin="0,0,0,10" />
+
+        <TextBlock Text="Node Value:" Margin="0,0,0,5" />
+        <TextBox Name="NodeValueTextBox" Margin="0,0,0,10" />
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="CancelButton" Content="Cancel" Width="75" Margin="5" Click="CancelButton_Click" />
+            <Button Name="AddButton" Content="Add" Width="75" Margin="5" Click="AddButton_Click" />
+        </StackPanel>
+    </StackPanel>
+</Window>

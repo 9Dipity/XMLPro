@@ -1,0 +1,40 @@
+﻿<Window x:Class="XMLTreeEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="XML Tree Editor" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Panel -->
+        <StackPanel Grid.Column="0" Margin="10">
+            <Button Name="LoadXmlButton" Content="Load XML Files" Click="LoadXmlButton_Click" Height="30" Margin="0,0,0,10"/>
+            <ListBox Name="XmlFileList" SelectionChanged="XmlFileList_SelectionChanged"/>
+
+            <StackPanel Margin="0,10,0,0">
+                <TextBlock Text="Selected Node Name:" />
+                <TextBox Name="NodeNameTextBox" IsReadOnly="True" />
+                <TextBlock Text="Selected Node Value:" Margin="0,10,0,0" />
+                <TextBox Name="NodeValueTextBox" IsReadOnly="True" />
+                <TextBlock Text="New Node Value:" Margin="0,10,0,0" />
+                <TextBox Name="NewValueTextBox" />
+
+                <TextBox Name="NewNodeNameTextBox" Margin="0,10,0,0" Text="Enter New Node Name"/>
+                <Button Name="RenameNodeButton" Content="Rename Nodes" Click="RenameNodeButton_Click" Height="30" Margin="0,10,0,0"/>
+            </StackPanel>
+
+            <Button Name="BulkChangeButton" Content="Bulk Change Values" Click="BulkChangeButton_Click" Height="30" Margin="0,10,0,0"/>
+        </StackPanel>
+
+        <!-- Right Panel -->
+        <TreeView Grid.Column="1" Name="XmlTreeView" Margin="10" SelectedItemChanged="XmlTreeView_SelectedItemChanged">
+            <TreeView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Add Child Node" Click="AddChildNode_Click" />
+                </ContextMenu>
+            </TreeView.ContextMenu>
+        </TreeView>
+    </Grid>
+</Window>
